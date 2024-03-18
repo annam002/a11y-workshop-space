@@ -27,7 +27,7 @@ const Navigation = ({selectedPage, numItemsInCart} : {selectedPage: string, numI
                      className="cursor-pointer absolute left-2"/>
                 <div className="flex items-center absolute right-2">
                     <img src={"/images/cart.png"} className="" width="24px" height="20px"/>
-                    <p className="bg-amber-500 rounded-full px-1">{numItemsInCart}</p>
+                    <p className="bg-amber-500 rounded-full px-2">{numItemsInCart}</p>
                 </div>
                 <div className="flex gap-4 absolute left-16">
                     {pages.map(filterValue =>

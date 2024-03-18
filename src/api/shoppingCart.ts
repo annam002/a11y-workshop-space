@@ -7,3 +7,5 @@ export const addToCart = (shipId: string) => {
 }
 
 export const getNumItemsInCart = () => cart.length;
+
+export const isShipInCart = (shipId: string) => cart.indexOf(shipId) !== -1;
