@@ -62,7 +62,9 @@ export const Ship = ({
               <div>Pay in {numberOfRates} Rates</div>
             </div>
             <div className="flex justify-end">
-              <img src={"/images/cart.png"} className={ isShipInCart(ship.id) ? "cursor-not-allowed" : "cursor-pointer"} onClick={() => addToCart(ship.id)}/>
+              <img src={isShipInCart(ship.id) ? "/images/cartAdded.png" : "/images/cart.png"}
+                   className={ isShipInCart(ship.id) ? "cursor-not-allowed" : "cursor-pointer"}
+                   onClick={() => addToCart(ship.id)}/>
             </div>
           </div>
         </div>
