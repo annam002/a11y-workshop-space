@@ -11,7 +11,7 @@ import {addToCart, getNumItemsInCart} from "@/api/shoppingCart";
 const FilteredShipCatalogue = ({ships, selectedPage}: { ships: SpaceShip[], selectedPage: string }) => {
     const [locationFilter, setLocationFilter] = useState("All");
     const [searchTerm, setSearchTerm] = useState("");
-    const [itemsInCart, setItemsInCart] = useState(0);
+    const [itemsInCart, setItemsInCart] = useState(getNumItemsInCart());
 
     const locationFilterValues = ["All"];
     new Set(ships.map(ship => ship.location).sort((a, b) => a.localeCompare(b))).forEach(location => locationFilterValues.push(location));
@@ -35,7 +35,7 @@ const FilteredShipCatalogue = ({ships, selectedPage}: { ships: SpaceShip[], sele
     return (
         <>
             <div className="w-full flex flex-col items-center my-8 gap-12">
-                <Navigation selectedPage={"all"} numItemsInCart={itemsInCart}/>
+                <Navigation selectedPage={selectedPage} numItemsInCart={itemsInCart}/>
                 <div className="text-3xl mx-auto">Welcome to Hexa Space Inc.</div>
                 <div className="flex flex-col items-center w-full">
                     <Search executeSearch={(searchTerm) => setSearchTerm(searchTerm)}/>
