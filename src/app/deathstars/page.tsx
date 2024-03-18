@@ -5,7 +5,7 @@ export default async function Ships() {
     const ships = await getSpaceShips();
     return (
         <>
-            <FilteredShipCatalogue ships={ships} selectedPage={"start"}/>
+            <FilteredShipCatalogue ships={ships} selectedPage={"star"}/>
         </>
     )
 }

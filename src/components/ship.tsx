@@ -8,6 +8,7 @@ import {
   monthlyRate,
   SpaceShip
 } from "@/api/getSpaceShips";
+import {isShipInCart} from "@/api/shoppingCart";
 
 export const Ship = ({
   ship, addToCart
@@ -61,7 +62,7 @@ export const Ship = ({
               <div>Pay in {numberOfRates} Rates</div>
             </div>
             <div className="flex justify-end">
-              <img src={"/images/cart.png"} className="cursor-pointer" onClick={() => addToCart(ship.id)}/>
+              <img src={"/images/cart.png"} className={ isShipInCart(ship.id) ? "cursor-not-allowed" : "cursor-pointer"} onClick={() => addToCart(ship.id)}/>
             </div>
           </div>
         </div>
