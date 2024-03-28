@@ -10,9 +10,11 @@
     "lint:prettier": "prettier --check .",
     "lintfix": "prettier --write --list-different . && npm run lint:js --fix",
     "test": "vitest",
+    "test:e2e": "playwright test",
     "typecheck": "clear; tsc"
   },
   "dependencies": {
+    "@axe-core/playwright": "^4.8.5",
     "@next/font": "13.1.6",
     "@types/node": "18.13.0",
     "@types/react": "18.0.27",
@@ -25,7 +27,7 @@
     "typescript": "4.9.5"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.24.1",
+    "@playwright/test": "^1.42.1",
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^14.2.2",
     "@typescript-eslint/eslint-plugin": "^7.5.0",
