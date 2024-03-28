@@ -1,21 +1,33 @@
-'use client';
+"use client";
 
-import {useState} from "react";
+import { useState } from "react";
 
-const Search = ({executeSearch} : {executeSearch: (searchTerm: string) => void}) => {
-    const [searchTerm, setSearchTerm] = useState("");
+const Search = ({
+  executeSearch,
+}: {
+  executeSearch: (searchTerm: string) => void;
+}) => {
+  const [searchTerm, setSearchTerm] = useState("");
 
-    return (
-        <>
-            <div className="flex gap-2 my-4 items-center justify-center w-[450px]">
-                <input type="text" placeholder="Search" onChange={(e) => setSearchTerm(e.target.value)}
-                       className="p-2 w-[300px] border border-gray-200 grow-1"/>
-                <div>
-                    <img src="/images/search.png" onClick={() => executeSearch(searchTerm)}
-                         className="cursor-pointer"/>
-                </div>
-            </div>
-        </>);
-}
+  return (
+    <>
+      <div className="my-4 flex w-[450px] items-center justify-center gap-2">
+        <input
+          type="text"
+          placeholder="Search"
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="grow-1 w-[300px] border border-gray-200 p-2"
+        />
+        <div>
+          <img
+            src="/images/search.png"
+            onClick={() => executeSearch(searchTerm)}
+            className="cursor-pointer"
+          />
+        </div>
+      </div>
+    </>
+  );
+};
 
 export default Search;

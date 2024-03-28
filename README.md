@@ -1,16 +1,11 @@
-# Hexa-Space
+# Accessibility Workshop: Space
 
-## Getting Started
-
-First checkout the repository and run the following command to install dependencies:
+## Quickstart
 
 ```bash
+git clone https://github.com/annam002/a11y-workshop-space.git
+cd a11y-workshop-space
 npm install
-```
-
-Then, run the development server:
-
-```bash
 npm run dev
 ```
 
