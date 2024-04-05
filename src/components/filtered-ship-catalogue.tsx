@@ -2,7 +2,7 @@
 
 import { Ship } from "@/components/ship";
 import { useState } from "react";
-import { SpaceShip } from "@/api/getSpaceShips";
+import { SpaceShip } from "@/api/spaceShips";
 import Search from "@/components/search";
 import LocationFilter from "@/components/location-filter";
 import Navigation from "@/components/navigation";
@@ -18,11 +18,6 @@ const FilteredShipCatalogue = ({
   const [locationFilter, setLocationFilter] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
   const [itemsInCart, setItemsInCart] = useState(getNumItemsInCart());
-
-  const locationFilterValues = ["All"];
-  new Set(
-    ships.map((ship) => ship.location).sort((a, b) => a.localeCompare(b)),
-  ).forEach((location) => locationFilterValues.push(location));
 
   const determineShipsToDisplay = () => {
     const shipsOnPage =
@@ -58,7 +53,7 @@ const FilteredShipCatalogue = ({
           <div className="flex w-full flex-nowrap gap-8 px-4">
             <LocationFilter
               currentFilter={locationFilter}
-              locationFilterValues={locationFilterValues}
+              ships={shipsToDisplay}
               filterByLocation={(filterValue) => setLocationFilter(filterValue)}
             />
 

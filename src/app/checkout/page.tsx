@@ -1,8 +1,8 @@
-import { getSpaceShips } from "@/api/getSpaceShips";
+import { spaceShips } from "@/api/spaceShips";
 import Checkout from "@/components/checkout/checkout";
 
 export default async function CheckoutPage() {
-  const ships = await getSpaceShips();
+  const ships = await spaceShips();
   return (
     <>
       <Checkout ships={ships} />

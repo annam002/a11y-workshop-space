@@ -1,8 +1,8 @@
-import { getSpaceShips } from "@/api/getSpaceShips";
+import { spaceShips } from "@/api/spaceShips";
 import FilteredShipCatalogue from "@/components/filtered-ship-catalogue";
 
 export default async function Ships() {
-  const ships = await getSpaceShips();
+  const ships = await spaceShips();
   return (
     <>
       <FilteredShipCatalogue ships={ships} selectedPage={"ship"} />

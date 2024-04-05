@@ -1,14 +1,18 @@
 "use client";
 
+import { getLocations, SpaceShip } from "@/api/spaceShips";
+import { useState } from "react";
+
 const LocationFilter = ({
   currentFilter,
-  locationFilterValues,
+  ships,
   filterByLocation,
 }: {
   currentFilter: string;
-  locationFilterValues: string[];
+  ships: SpaceShip[];
   filterByLocation: (location: string) => void;
 }) => {
+  const [locationFilterValues] = useState(getLocations(ships));
   return (
     <>
       <div className="flex flex-col gap-4 px-4">

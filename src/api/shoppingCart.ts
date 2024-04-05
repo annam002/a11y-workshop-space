@@ -1,4 +1,4 @@
-import { SpaceShip } from "@/api/getSpaceShips";
+import { SpaceShip } from "@/api/spaceShips";
 
 const cart = [] as string[];
 
