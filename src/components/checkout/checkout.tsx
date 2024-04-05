@@ -20,7 +20,7 @@ const Checkout = ({ ships }: { ships: SpaceShip[] }) => {
         <div className="text-3xl">Checkout</div>
         <div className="w-max-[750px] flex gap-8">
           <Cart ships={shipsInCart} />
-          <InvoiceForm />
+          {shipsInCart.length > 0 && <InvoiceForm />}
         </div>
       </div>
     </>

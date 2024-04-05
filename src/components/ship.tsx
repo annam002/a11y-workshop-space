@@ -29,12 +29,10 @@ export const Ship = ({
       <div className="flex flex-col items-center gap-4 rounded bg-gray-100 p-6 text-[#858585] shadow-sm">
         <p className="text-2xl">{ship.name}</p>
         <div className="flex flex-row gap-4">
-          <Image
+          <img
             src={`/images${ship.image}`}
             height={256}
             width={256}
-            alt="{Bild}"
-            priority
             className="m-4 rounded"
           />
           <div className="m-4 flex flex-col gap-4">
