@@ -20,15 +20,17 @@ export const Cart = ({ ships }: { ships: SpaceShip[] }) => {
       <div className="text-2xl">Ships in Cart</div>
       {ships.length === 0 && <div>Oh no! There are no items in the cart!</div>}
       {ships.length > 0 && (
-        <div className="grid w-full grid-cols-2 grid-rows-2 justify-between gap-x-8 gap-y-4">
+        <div className="flex w-full flex-col gap-4">
           {ships.map((ship) => (
-            <>
+            <div key={ship.id} className="flex w-full justify-between gap-x-12">
               <span>{ship.name}</span>
               <span>{ship.price} Credits</span>
-            </>
+            </div>
           ))}
-          <span className="font-bold">Total</span>
-          <span className="font-bold">{totalPrice} Credits</span>
+          <div className="flex w-full justify-between gap-x-12">
+            <span className="font-bold">Total</span>
+            <span className="font-bold">{totalPrice} Credits</span>
+          </div>
         </div>
       )}
     </div>
