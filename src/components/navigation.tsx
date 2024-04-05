@@ -34,17 +34,18 @@ const Navigation = ({
       <div className="relative w-full">
         <img
           src={"/images/logo.png"}
-          width={"40px"}
-          height={"40px"}
+          width="40"
+          height="40"
           onClick={() => router.push("/")}
           className="absolute left-2 cursor-pointer"
         />
         <div className="absolute right-2 flex items-center">
           <img
             src={"/images/cart.png"}
-            className=""
-            width="24px"
-            height="20px"
+            className="cursor-pointer"
+            width="24"
+            height="20"
+            onClick={() => router.push("/checkout")}
           />
           <p className="rounded-full bg-amber-500 px-2">{numItemsInCart}</p>
         </div>
