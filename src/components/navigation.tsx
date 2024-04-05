@@ -27,13 +27,6 @@ const Navigation = ({
           <img src={"/images/logo.png"} width="40" height="40" />
         </Link>
 
-        <div className="absolute right-2 flex items-center">
-          <Link href="/checkout">
-            <img src={"/images/cart.png"} width="24" height="20" />
-          </Link>
-
-          <p className="rounded-full bg-amber-500 px-2">{numItemsInCart}</p>
-        </div>
         <div className="absolute left-16 flex gap-4">
           {pages.map((filterValue) => (
             <Link
@@ -44,6 +37,13 @@ const Navigation = ({
               {filterValue.displayName}
             </Link>
           ))}
+        </div>
+
+        <div className="absolute right-2 flex items-center">
+          <Link href="/checkout">
+            <img src={"/images/cart.png"} width="24" height="20" />
+          </Link>
+          <p className="rounded-full bg-amber-500 px-2">{numItemsInCart}</p>
         </div>
       </div>
     </>
