@@ -59,13 +59,13 @@ const FilteredShipCatalogue = ({
 
   return (
     <>
-      <div className="my-8 flex w-full flex-col items-center gap-12">
+      <div className="flex w-full flex-col items-center gap-12 py-8 sm:px-8">
         <Navigation selectedPage={selectedPage} numItemsInCart={itemsInCart} />
         <div className="mx-auto text-3xl">Welcome to Hexa Space Inc.</div>
         <div className="flex w-full flex-col items-center gap-4">
           <Search executeSearch={(searchTerm) => setSearchTerm(searchTerm)} />
-          <div className="flex w-full flex-nowrap gap-8 px-4">
-            <div className="flex flex-col gap-8">
+          <div className="flex w-full flex-col gap-8 px-4 md:flex-row">
+            <div className="flex flex-col items-center gap-8 md:items-start">
               <LocationFilter
                 currentFilter={locationFilter}
                 locationFilterValues={locationFilterValues}
@@ -88,7 +88,7 @@ const FilteredShipCatalogue = ({
               </div>
             )}
             {shipsToDisplay.length > 0 && (
-              <div className="flex w-full flex-row flex-wrap justify-center gap-4">
+              <div className="flex w-full flex-col justify-center gap-4 md:flex-row md:flex-wrap">
                 {shipsToDisplay.map((ship) => (
                   <Ship
                     key={ship.id}

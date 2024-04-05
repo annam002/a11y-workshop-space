@@ -22,12 +22,12 @@ const Navigation = ({
 
   return (
     <>
-      <div className="relative w-full">
-        <Link href="/" className="absolute left-2">
+      <div className="flex w-full flex-col items-center gap-4 lg:flex-row lg:justify-between">
+        <Link href="/">
           <img src={"/images/logo.png"} width="40" height="40" />
         </Link>
 
-        <div className="absolute left-16 flex gap-4">
+        <div className="flex flex-col gap-4 md:flex-row">
           {pages.map((filterValue) => (
             <Link
               href={filterValue.path === "all" ? "/" : filterValue.path}
@@ -39,7 +39,7 @@ const Navigation = ({
           ))}
         </div>
 
-        <div className="absolute right-2 flex items-center">
+        <div className="flex items-center">
           <Link href="/checkout">
             <img src={"/images/cart.png"} width="24" height="20" />
           </Link>
