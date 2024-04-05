@@ -27,7 +27,7 @@ const Search = ({
           className="grow-1 w-[200px] border border-gray-200 p-2 md:w-[300px]"
         />
         <button type="submit">
-          <img src="/images/search.png" />
+          <img src="/images/search.png" alt="Search" />
         </button>
       </form>
     </>

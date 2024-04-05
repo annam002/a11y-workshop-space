@@ -37,6 +37,7 @@ export const Ship = ({
             <img
               src={`/images${ship.image}`}
               className="m-4 rounded object-scale-down"
+              alt=""
             />
           </div>
           <div className="m-4 flex flex-col gap-4">
@@ -79,6 +80,7 @@ export const Ship = ({
               <button
                 disabled={isShipInCart(ship.id)}
                 onClick={() => addToCart(ship.id)}
+                aria-label={`Add ${ship.name} to cart`}
               >
                 <img
                   src={
@@ -86,6 +88,7 @@ export const Ship = ({
                       ? "/images/cartAdded.png"
                       : "/images/cart.png"
                   }
+                  alt=""
                 />
               </button>
             </div>
