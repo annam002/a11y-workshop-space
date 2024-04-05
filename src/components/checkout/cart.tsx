@@ -16,8 +16,8 @@ export const Cart = ({ ships }: { ships: SpaceShip[] }) => {
   const [totalPrice] = useState(getTotalPrice());
 
   return (
-    <div className="flex w-full flex-col items-start gap-4">
-      <div className="text-3xl">Ships in Cart</div>
+    <div className="flex w-full flex-col items-start gap-4 rounded bg-gray-100 p-6 ">
+      <div className="text-2xl">Ships in Cart</div>
       {ships.length === 0 && <div>Oh no! There are no items in the cart!</div>}
       {ships.length > 0 && (
         <div className="grid w-full grid-cols-2 grid-rows-2 justify-between gap-x-8 gap-y-4">

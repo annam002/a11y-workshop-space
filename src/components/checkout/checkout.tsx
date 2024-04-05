@@ -12,12 +12,13 @@ const Checkout = ({ ships }: { ships: SpaceShip[] }) => {
 
   return (
     <>
-      <div className="my-8 flex w-full flex-col items-center gap-20">
+      <div className="my-8 flex w-full flex-col items-center gap-12">
         <Navigation
           selectedPage={"checkout"}
           numItemsInCart={shipsInCart.length}
         />
-        <div className="w-max-[750px] flex flex-col gap-12">
+        <div className="text-3xl">Checkout</div>
+        <div className="w-max-[750px] flex gap-8">
           <Cart ships={shipsInCart} />
           <InvoiceForm />
         </div>

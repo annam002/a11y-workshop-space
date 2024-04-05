@@ -4,8 +4,8 @@ import { InputField } from "@/components/checkout/input-field";
 
 export const InvoiceForm = () => {
   return (
-    <div className="w-max-[750px] flex flex-col items-start gap-4">
-      <div className="text-3xl">Invoice Data</div>
+    <div className="w-max-[750px] flex flex-col items-start gap-4 rounded bg-gray-100 p-6 ">
+      <div className="text-2xl">Invoice Data</div>
       <InputField label="Name" />
       <InputField label="Planet" />
       <InputField label="Settlement" />
