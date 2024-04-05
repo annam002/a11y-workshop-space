@@ -16,13 +16,8 @@ export type SpaceShip = {
 
 export type MileageInLightYears = number;
 
-export const getSpaceShips = async () => {
+export const getSpaceShips = async (): Promise<SpaceShip[]> => {
   return loadShips().map((ship) => mapShip(ship));
-};
-
-export const getSpaceShip = async (shipId: string) => {
-  const shipInYard = loadShips().find(({ id }) => shipId === id);
-  return shipInYard ? mapShip(shipInYard) : undefined;
 };
 
 const INTEREST_RATE = 1.1;
@@ -60,7 +55,7 @@ const mileageToLightYears = ({
 
 const loadShips = () => ships.inYard as unknown as ShipInYard[];
 
-const mapShip = (ship: ShipInYard) => {
+const mapShip = (ship: ShipInYard): SpaceShip => {
   return {
     id: ship.id,
     inStock: ship.inStock,

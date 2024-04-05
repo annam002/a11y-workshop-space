@@ -42,9 +42,10 @@ const Navigation = ({
         <div className="absolute right-2 flex items-center">
           <img
             src={"/images/cart.png"}
-            className=""
+            className="cursor-pointer"
             width="24px"
             height="20px"
+            onClick={() => router.push("/checkout")}
           />
           <p className="rounded-full bg-amber-500 px-2">{numItemsInCart}</p>
         </div>
