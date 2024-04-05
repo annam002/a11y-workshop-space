@@ -6,7 +6,7 @@
       "type": "ship",
       "max_atmosphering_speed": "1050",
       "inStock": "5",
-      "creds": 50000,
+      "creds": 40000,
       "onSale": "yes",
       "location": {
         "name": "Tatooine",
@@ -35,7 +35,7 @@
       "max_atmosphering_speed": "100",
       "inStock": "1",
       "onSale": "active",
-      "creds": 50000,
+      "creds": 95000,
       "location": {
         "name": "Alderaan",
         "rotation_period": "24",
@@ -63,7 +63,7 @@
       "max_atmosphering_speed": "1250",
       "inStock": "0",
       "onSale": "false",
-      "creds": 50000,
+      "creds": 60000,
       "location": {
         "name": "Coruscant",
         "rotation_period": "24",
@@ -91,7 +91,7 @@
       "max_atmosphering_speed": "1000",
       "inStock": "10",
       "onSale": "no promo",
-      "creds": 50000,
+      "creds": 39999,
       "location": {
         "name": "Tatooine",
         "rotation_period": "23",
@@ -118,7 +118,7 @@
       "max_atmosphering_speed": "100",
       "inStock": "4",
       "onSale": "false",
-      "creds": 50000,
+      "creds": 90000,
       "location": {
         "name": "Abafar",
         "rotation_period": "24",
