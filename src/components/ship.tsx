@@ -21,7 +21,7 @@ export const Ship = ({
       : "bg-red-500";
   return (
     <>
-      <div className="flex flex-col items-center gap-4 rounded bg-gray-100 p-6 text-[#858585] shadow-sm">
+      <div className="flex flex-col items-center gap-4 rounded bg-gray-100 p-6 text-gray-800 shadow-sm">
         <p className="text-2xl">{ship.name}</p>
         <div className="flex flex-row gap-4">
           <img
