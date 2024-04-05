@@ -36,7 +36,7 @@ export const Ship = ({
           />
           <div className="m-4 flex flex-col gap-4">
             <div>
-              <b>Location:</b>
+              <b>Location: </b>
               {ship.location}
             </div>
             {ship.mileage && (
