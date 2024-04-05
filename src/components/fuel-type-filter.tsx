@@ -1,22 +1,22 @@
 "use client";
 
-const LocationFilter = ({
+const FuelTypeFilter = ({
   currentFilter,
-  locationFilterValues,
-  filterByLocation,
+  fuelTypeFilterValues,
+  filterByFuelType,
 }: {
   currentFilter: string;
-  locationFilterValues: string[];
-  filterByLocation: (location: string) => void;
+  fuelTypeFilterValues: string[];
+  filterByFuelType: (fuelType: string) => void;
 }) => {
   return (
     <>
       <div className="flex flex-col gap-4 px-4">
-        <div className="text-xl">Location</div>
+        <div className="text-xl">Fuel Type</div>
         <div className="flex flex-col">
-          {locationFilterValues.map((filterValue) => (
+          {fuelTypeFilterValues.map((filterValue) => (
             <div
-              onClick={() => filterByLocation(filterValue)}
+              onClick={() => filterByFuelType(filterValue)}
               key={filterValue}
               className={`cursor-pointer border border-solid border-gray-200 px-6 py-2 ${filterValue === currentFilter ? "bg-gray-200" : ""}`}
             >
@@ -29,4 +29,4 @@ const LocationFilter = ({
   );
 };
 
-export default LocationFilter;
+export default FuelTypeFilter;
