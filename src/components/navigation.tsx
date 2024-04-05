@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Navigation = ({
   selectedPage,
@@ -20,44 +20,29 @@ const Navigation = ({
     },
   ];
 
-  const router = useRouter();
-  const goToPage = (path: string) => {
-    if (path === "all") {
-      router.push("/");
-    } else {
-      router.push(`/${path}`);
-    }
-  };
-
   return (
     <>
       <div className="relative w-full">
-        <img
-          src={"/images/logo.png"}
-          width="40"
-          height="40"
-          onClick={() => router.push("/")}
-          className="absolute left-2 cursor-pointer"
-        />
+        <Link href="/" className="absolute left-2">
+          <img src={"/images/logo.png"} width="40" height="40" />
+        </Link>
+
         <div className="absolute right-2 flex items-center">
-          <img
-            src={"/images/cart.png"}
-            className="cursor-pointer"
-            width="24"
-            height="20"
-            onClick={() => router.push("/checkout")}
-          />
+          <Link href="/checkout">
+            <img src={"/images/cart.png"} width="24" height="20" />
+          </Link>
+
           <p className="rounded-full bg-amber-500 px-2">{numItemsInCart}</p>
         </div>
         <div className="absolute left-16 flex gap-4">
           {pages.map((filterValue) => (
-            <div
-              onClick={() => goToPage(filterValue.path)}
+            <Link
+              href={filterValue.path === "all" ? "/" : filterValue.path}
               key={filterValue.path}
-              className={`shrink-0 cursor-pointer py-2 ${filterValue.pageName === selectedPage ? "font-bold" : ""}`}
+              className={`shrink-0 py-2 ${filterValue.pageName === selectedPage ? "font-bold" : ""}`}
             >
               {filterValue.displayName}
-            </div>
+            </Link>
           ))}
         </div>
       </div>

@@ -15,13 +15,13 @@ const FuelTypeFilter = ({
         <div className="text-xl">Fuel Type</div>
         <div className="flex flex-col">
           {fuelTypeFilterValues.map((filterValue) => (
-            <div
+            <button
               onClick={() => filterByFuelType(filterValue)}
               key={filterValue}
-              className={`cursor-pointer border border-solid border-gray-200 px-6 py-2 ${filterValue === currentFilter ? "bg-gray-200" : ""}`}
+              className={`border border-solid border-gray-200 px-6 py-2 text-left ${filterValue === currentFilter ? "bg-gray-200" : ""}`}
             >
               {filterValue}
-            </div>
+            </button>
           ))}
         </div>
       </div>
