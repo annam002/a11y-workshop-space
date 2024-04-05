@@ -12,12 +12,29 @@ export type SpaceShip = {
   constructionYear: number;
   claps?: number;
   type: "ship" | "star" | "destroyer";
+  fuelType: string;
 };
 
 export type MileageInLightYears = number;
 
-export const getSpaceShips = async (): Promise<SpaceShip[]> => {
+export const spaceShips = async (): Promise<SpaceShip[]> => {
   return loadShips().map((ship) => mapShip(ship));
+};
+
+export const getLocations = (ships: SpaceShip[]) => {
+  const locations = ["All"];
+  new Set(
+    ships.map((ship) => ship.location).sort((a, b) => a.localeCompare(b)),
+  ).forEach((location) => locations.push(location));
+  return locations;
+};
+
+export const getFuelTypes = (ships: SpaceShip[]) => {
+  const fuelTypes = ["All"];
+  new Set(
+    ships.map((ship) => ship.fuelType).sort((a, b) => a.localeCompare(b)),
+  ).forEach((fuelType) => fuelTypes.push(fuelType));
+  return fuelTypes;
 };
 
 const INTEREST_RATE = 1.1;
@@ -67,6 +84,7 @@ const mapShip = (ship: ShipInYard): SpaceShip => {
     name: ship.name,
     speed: Number(ship.max_atmosphering_speed),
     type: ship.type,
+    fuelType: ship.fuelType,
   };
 };
 

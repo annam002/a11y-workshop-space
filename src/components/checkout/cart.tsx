@@ -1,6 +1,6 @@
 "use client";
 
-import { SpaceShip } from "@/api/getSpaceShips";
+import { SpaceShip } from "@/api/spaceShips";
 import { useState } from "react";
 
 export const Cart = ({ ships }: { ships: SpaceShip[] }) => {

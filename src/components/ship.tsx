@@ -2,11 +2,7 @@
 
 import { useState } from "react";
 import { Rates } from "./rates";
-import {
-  DEFAULT_NUM_OF_MONTH,
-  monthlyRate,
-  SpaceShip,
-} from "@/api/getSpaceShips";
+import { DEFAULT_NUM_OF_MONTH, monthlyRate, SpaceShip } from "@/api/spaceShips";
 import { isShipInCart } from "@/api/shoppingCart";
 
 export const Ship = ({

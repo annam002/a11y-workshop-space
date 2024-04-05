@@ -19,7 +19,7 @@
         "surface_water": "1",
         "population": "200000"
       },
-      "fuelType": "hypermatter",
+      "fuelType": "Hypermatter",
       "image": "/xwing2.jpg",
       "mileage": {
         "number": 11102929384828387,
@@ -48,7 +48,7 @@
         "population": "2000000000"
       },
       "image": "/deathstarPink.jpg",
-      "fuelType": "hypermatter",
+      "fuelType": "Hypermatter E10",
       "vehicleCondition": "3 years in hanger bay",
       "mileage": {
         "number": 42333333111214,
@@ -76,7 +76,7 @@
         "population": "1000000000000"
       },
       "vehicleCondition": "accident free",
-      "fuelType": "hypermatter",
+      "fuelType": "Hypermatter",
       "image": "/millenniumFalconGreen.jpg",
       "mileage": {
         "number": 4.2,
@@ -102,7 +102,7 @@
         "terrain": "desert",
         "surface_water": "1"
       },
-      "fuelType": "hypermatter",
+      "fuelType": "Hypermatter Super",
       "vehicleCondition": "accident free",
       "image": "/xwing4000.jpg",
       "mileage": {
@@ -130,7 +130,7 @@
         "surface_water": "40",
         "population": "2000000000"
       },
-      "fuelType": "hypermatter",
+      "fuelType": "Hypermatter",
       "vehicleCondition": "3 years in hanger bay",
       "image": "/deathstarInHangerbay.jpg",
       "mileage": {
@@ -158,7 +158,7 @@
         "surface_water": "40",
         "population": "2000000000"
       },
-      "fuelType": "hypermatter",
+      "fuelType": "Hypermatter",
       "vehicleCondition": "3 years in hanger bay",
       "image": "/starDestroyer.jpg",
       "mileage": {
@@ -186,7 +186,7 @@
         "surface_water": "40",
         "population": "2000000000"
       },
-      "fuelType": "hypermatter",
+      "fuelType": "Hypermatter E10",
       "vehicleCondition": "3 years in hanger bay",
       "image": "/starDestroyer2.jpg",
       "mileage": {
