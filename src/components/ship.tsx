@@ -13,12 +13,21 @@ export const Ship = ({
   addToCart: (shipId: string) => void;
 }) => {
   const [numberOfRates, setNumberOfRates] = useState(DEFAULT_NUM_OF_MONTH);
+
   const availabilityClass =
     ship.inStock > 0
       ? ship.inStock > 5
         ? "bg-green-500"
         : "bg-yellow-500"
       : "bg-red-500";
+
+  const availabilityLabel =
+    ship.inStock > 0
+      ? ship.inStock > 5
+        ? "In Stock"
+        : "Limited Stock"
+      : "Out of Stock";
+
   return (
     <>
       <div className="flex flex-col items-center gap-4 rounded bg-gray-100 p-6 text-gray-800 shadow-sm">
@@ -49,6 +58,7 @@ export const Ship = ({
                   availabilityClass
                 }
               />
+              <span>{availabilityLabel}</span>
             </div>
             <div className="flex flex-col">
               <b>Price:</b>
