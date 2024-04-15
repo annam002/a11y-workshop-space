@@ -82,22 +82,27 @@ const FilteredShipCatalogue = ({
               />
             </div>
 
-            {shipsToDisplay.length === 0 && (
-              <div className="w-full p-10 text-center">
-                These are not the ships you are looking for...
-              </div>
-            )}
-            {shipsToDisplay.length > 0 && (
-              <div className="flex w-full flex-col justify-center gap-4 md:flex-row md:flex-wrap">
-                {shipsToDisplay.map((ship) => (
-                  <Ship
-                    key={ship.id}
-                    ship={ship}
-                    addToCart={addToCartAndRefresh}
-                  />
-                ))}
-              </div>
-            )}
+            <div aria-live="polite" aria-atomic="true" className="w-full">
+              {shipsToDisplay.length === 0 && (
+                <div className="text-center text-xl">No spaceships found</div>
+              )}
+              {shipsToDisplay.length > 0 && (
+                <>
+                  <div className="mb-4 text-center text-xl">
+                    {shipsToDisplay.length} spaceships found
+                  </div>
+                  <div className="flex w-full flex-col justify-center gap-4 md:flex-row md:flex-wrap">
+                    {shipsToDisplay.map((ship) => (
+                      <Ship
+                        key={ship.id}
+                        ship={ship}
+                        addToCart={addToCartAndRefresh}
+                      />
+                    ))}
+                  </div>
+                </>
+              )}
+            </div>
           </div>
         </div>
       </div>
