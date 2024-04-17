@@ -30,8 +30,13 @@ export const Ship = ({
 
   return (
     <>
-      <div className="flex flex-col items-center gap-4 rounded bg-gray-100 p-6 text-gray-800 shadow-sm">
-        <p className="text-2xl">{ship.name}</p>
+      <section
+        aria-labelledby={`ship-${ship.id}`}
+        className="flex flex-col items-center gap-4 rounded bg-gray-100 p-6 text-gray-800 shadow-sm"
+      >
+        <h2 className="text-2xl" id={`ship-${ship.id}`}>
+          {ship.name}
+        </h2>
         <div className="flex flex-col gap-4 md:flex-row">
           <div className="w-full max-w-48 lg:max-w-60">
             <img
@@ -94,7 +99,7 @@ export const Ship = ({
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

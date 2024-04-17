@@ -24,7 +24,7 @@ export const InvoiceForm = () => {
   };
   return (
     <div className="w-max-[750px] flex flex-col items-start gap-4 rounded bg-gray-100 p-6 ">
-      <div className="text-2xl">Invoice Data</div>
+      <h2 className="text-2xl">Invoice Data</h2>
       <form onSubmit={submitData} className="flex flex-col gap-4">
         <InputField label="Name" />
         <InputField label="Planet" />

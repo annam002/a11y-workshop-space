@@ -61,9 +61,9 @@ const FuelTypeFilter = ({
   return (
     <>
       <div className="flex flex-col gap-4 px-4">
-        <div className="text-xl" id="fuelType">
+        <h2 className="text-xl" id="fuelType">
           Fuel Type
-        </div>
+        </h2>
         <div
           role="radiogroup"
           aria-labelledby="fuelType"

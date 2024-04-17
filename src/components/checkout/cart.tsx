@@ -17,7 +17,7 @@ export const Cart = ({ ships }: { ships: SpaceShip[] }) => {
 
   return (
     <div className="flex w-full flex-col items-start gap-4 rounded bg-gray-100 p-6 ">
-      <div className="text-2xl">Ships in Cart</div>
+      <h2 className="text-2xl">Ships in Cart</h2>
       {ships.length === 0 && <div>Oh no! There are no items in the cart!</div>}
       {ships.length > 0 && (
         <div className="flex w-full flex-col gap-4">

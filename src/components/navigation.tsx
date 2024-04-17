@@ -22,7 +22,10 @@ const Navigation = ({
 
   return (
     <>
-      <div className="flex w-full flex-col items-center gap-4 lg:flex-row lg:justify-between">
+      <nav
+        aria-label="Main"
+        className="flex w-full flex-col items-center gap-4 lg:flex-row lg:justify-between"
+      >
         <Link href="/">
           <img src={"/images/logo.png"} width="40" height="40" alt="Homepage" />
         </Link>
@@ -50,7 +53,7 @@ const Navigation = ({
           </Link>
           <p className="rounded-full bg-amber-500 px-2">{numItemsInCart}</p>
         </div>
-      </div>
+      </nav>
     </>
   );
 };

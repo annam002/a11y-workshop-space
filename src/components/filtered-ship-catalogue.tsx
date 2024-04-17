@@ -60,12 +60,20 @@ const FilteredShipCatalogue = ({
   return (
     <>
       <div className="flex w-full flex-col items-center gap-12 py-8 sm:px-8">
-        <Navigation selectedPage={selectedPage} numItemsInCart={itemsInCart} />
-        <div className="mx-auto text-3xl">Welcome to Hexa Space Inc.</div>
-        <div className="flex w-full flex-col items-center gap-4">
+        <header className="flex w-full flex-col items-center gap-12">
+          <Navigation
+            selectedPage={selectedPage}
+            numItemsInCart={itemsInCart}
+          />
+          <h1 className="mx-auto text-3xl">Welcome to Hexa Space Inc.</h1>
+        </header>
+        <main className="flex w-full flex-col items-center gap-4">
           <Search executeSearch={(searchTerm) => setSearchTerm(searchTerm)} />
           <div className="flex w-full flex-col gap-8 px-4 md:flex-row">
-            <div className="flex flex-col items-center gap-8 md:items-start">
+            <nav
+              aria-label="Filter"
+              className="flex flex-col items-center gap-8 md:items-start"
+            >
               <LocationFilter
                 currentFilter={locationFilter}
                 locationFilterValues={locationFilterValues}
@@ -80,7 +88,7 @@ const FilteredShipCatalogue = ({
                   setFuelTypeFilter(filterValue)
                 }
               />
-            </div>
+            </nav>
 
             <div aria-live="polite" aria-atomic="true" className="w-full">
               {shipsToDisplay.length === 0 && (
@@ -104,7 +112,7 @@ const FilteredShipCatalogue = ({
               )}
             </div>
           </div>
-        </div>
+        </main>
       </div>
     </>
   );

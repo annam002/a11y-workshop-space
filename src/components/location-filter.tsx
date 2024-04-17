@@ -12,9 +12,9 @@ const LocationFilter = ({
   return (
     <>
       <div className="flex flex-col gap-4 px-4">
-        <div className="text-xl" id="location">
+        <h2 className="text-xl" id="location">
           Location
-        </div>
+        </h2>
         <div
           className="flex flex-col"
           role={"group"}
