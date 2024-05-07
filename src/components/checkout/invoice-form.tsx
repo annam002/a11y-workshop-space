@@ -12,7 +12,8 @@ export const InvoiceForm = () => {
     const name = e.currentTarget.Name.value;
     const planet = e.currentTarget.Planet.value;
     const settlement = e.currentTarget.Settlement.value;
-    if (!name || !planet || !settlement) {
+    const email = e.currentTarget.Email.value;
+    if (!name || !planet || !settlement || !email) {
       setPaymentMessage("Error occurred!");
       setPaymentResultClass("text-red-500");
     } else {
@@ -28,6 +29,12 @@ export const InvoiceForm = () => {
         <InputField label="Name" />
         <InputField label="Planet" />
         <InputField label="Settlement" />
+        <InputField label="Email" />
+        <div className="flex gap-2">
+          <input type="checkbox" name="newsletter" />
+          <span>Inform me about product news</span>
+        </div>
+
         <button
           type="submit"
           className="rounded border border-solid border-gray-800 bg-gray-800 px-4 py-2 text-white"
