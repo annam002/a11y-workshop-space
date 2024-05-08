@@ -71,11 +71,12 @@ export const Ship = ({
               </dt>
               <dd className="font-bold">Price:</dd>
               <dt data-testid="ship-price">{ship.price}</dt>
-              <dd className="font-bold">Monthly Rate:</dd>
+              <dd className="font-bold" id={`monthlyRate-${ship.id}`}>Monthly Rate:</dd>
               <dt>{monthlyRate(ship, numberOfRates).toFixed(2)}</dt>
             </dl>
             <div>
               <Rates
+                describedby={`ship-${ship.id} monthlyRate-${ship.id}`}
                 numberOfRates={numberOfRates}
                 setNumberOfRates={setNumberOfRates}
               />
