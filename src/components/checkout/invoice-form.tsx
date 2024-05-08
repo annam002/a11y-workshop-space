@@ -23,13 +23,13 @@ export const InvoiceForm = () => {
     return false;
   };
   return (
-    <div className="w-max-[750px] flex flex-col items-start gap-4 rounded bg-gray-100 p-6 ">
+    <div className="flex shrink-0 flex-col items-start gap-4 rounded bg-gray-100 p-6">
       <h2 className="text-2xl">Invoice Data</h2>
-      <form onSubmit={submitData} className="flex flex-col gap-4">
-        <InputField label="Name" />
-        <InputField label="Planet" />
-        <InputField label="Settlement" />
-        <InputField label="Email" />
+      <form onSubmit={submitData} className="flex shrink-0 flex-col gap-4">
+        <InputField label="Name" placeholder="All your names" />
+        <InputField label="Planet" placeholder="Planet name (In Standard)" />
+        <InputField label="Settlement" placeholder="City/District/Community" />
+        <InputField label="Email" placeholder="Paypal email address" />
         <div className="flex gap-2">
           <input type="checkbox" name="newsletter" />
           <span>Inform me about product news</span>

@@ -21,7 +21,7 @@ const Checkout = ({ ships }: { ships: SpaceShip[] }) => {
           <h1 className="text-3xl">Checkout</h1>
         </header>
 
-        <main className="w-max-[750px] flex flex-col gap-8 md:flex-row">
+        <main className="w-max-[1024px] flex flex-col gap-8 md:flex-row">
           <Cart ships={shipsInCart} />
           {shipsInCart.length > 0 && <InvoiceForm />}
         </main>
