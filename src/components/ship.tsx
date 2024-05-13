@@ -46,34 +46,34 @@ export const Ship = ({
             />
           </div>
           <div className="m-4 flex flex-col gap-4">
-            <div>
-              <b>Location: </b>
-              {ship.location}
-            </div>
-            {ship.mileage && (
-              <div>
-                <b>Mileage (ly)</b>:{" "}
-                <span data-testid="ship-mileage"> {ship.mileage}</span>
-              </div>
-            )}
-            <div className="flex flex-col">
-              <b>Availability:</b>
-              <span
-                className={
-                  "h-[24px] w-[24px] rounded-3xl border border-gray-500 " +
-                  availabilityClass
-                }
-              />
-              <span>{availabilityLabel}</span>
-            </div>
-            <div className="flex flex-col">
-              <b>Price:</b>
-              <span data-testid="ship-price">{ship.price}</span>
-            </div>
-            <div className="flex flex-col">
-              <b>Monthly Rate:</b>
-              <span>{monthlyRate(ship, numberOfRates).toFixed(2)}</span>
-            </div>
+            <dl
+              aria-label="Properties"
+              aria-describedby={`ship-${ship.id}`}
+              className="flex flex-col gap-2"
+            >
+              <dd className="font-bold">Location:</dd>
+              <dt>{ship.location}</dt>
+              {ship.mileage && (
+                <>
+                  <dd className="font-bold">Mileage (ly):</dd>:{" "}
+                  <dt data-testid="ship-mileage"> {ship.mileage}</dt>
+                </>
+              )}
+              <dd className="font-bold">Availability:</dd>
+              <dt className="flex flex-wrap items-center gap-0.5">
+                <span
+                  className={
+                    "inline-block h-[24px] w-[24px] rounded-3xl border border-gray-500 " +
+                    availabilityClass
+                  }
+                />
+                {availabilityLabel}
+              </dt>
+              <dd className="font-bold">Price:</dd>
+              <dt data-testid="ship-price">{ship.price}</dt>
+              <dd className="font-bold">Monthly Rate:</dd>
+              <dt>{monthlyRate(ship, numberOfRates).toFixed(2)}</dt>
+            </dl>
             <div>
               <Rates
                 numberOfRates={numberOfRates}
